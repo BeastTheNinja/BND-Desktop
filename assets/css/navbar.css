@@ -1,0 +1,97 @@
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    padding-bottom: 0;
+    flex-wrap: wrap; /* Sørger for, at indhold ikke overlapper på mindre skærme */
+}
+
+/* Logo + tekst sammen */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo-styling */
+.nav-logo img {
+    width: 60px; /* Gør logoet større på desktop */
+    height: auto;
+}
+
+/* BND-tekst styling */
+.nav-logo p {
+    position: relative;
+    top: 0;
+    right: 16px;
+    font-size: 5.3rem;
+    font-weight: bold;
+    color: white;
+}
+.BD{
+    color: #cc0202;
+}
+.BD{
+    font-weight: 900;
+}
+
+/* Menu-links */
+.liste-nav {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+}
+
+.liste-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 200ms;
+}
+.liste-nav li a:hover{
+    color: red;
+    border: 5px solid red;
+}
+
+/* Tablet-visning */
+@media (max-width: 1024px) {
+    .nav-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    .liste-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Mobil-visning */
+@media (max-width: 768px) {
+    .nav-logo img {
+        width: 50px; /* Mindre logo på mobil */
+    }
+
+    .nav-logo p {
+        font-size: 4.35rem;
+    }
+
+    .liste-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .liste-nav li a {
+        font-size: 1rem;
+    }
+}

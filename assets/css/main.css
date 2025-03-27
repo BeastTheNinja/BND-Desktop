@@ -1,0 +1,308 @@
+@import url(navbar.css);
+/* GLOBAL STYLING */
+/* #region global styles */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000027;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+article{
+    margin: 0 auto;
+}
+figure{
+    margin: 0;
+}
+figcaption{
+    margin: 0;
+}
+/* #endregion */
+/* #region header */
+/* HEADER STYLING */
+.header-main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    text-align: center;
+}
+.header-main h1{
+    font-size: 3.5rem;
+    color: red;
+}
+/* #endregion */
+/* #region section one  */
+.section-one {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolonner på desktop */
+    gap: 15px;
+    padding: 20px;
+}
+.figure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Sikrer at teksten starter lige efter billedet */
+    text-align: center;
+    width: 100%;
+}
+
+.figure-container figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.figure-container figcaption {
+    width: 100%;
+    padding-top: 10px; /* Giver lidt luft mellem billedet og teksten */
+}
+.figure-container figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Tekststil til figcaptions */
+.figure-container figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Sørger for, at footer skubbes ned */
+    color: white;
+    width: 100%;
+    height: 100%; /* Gør, at footer bliver skubbet til bunden */
+}
+
+.figure-container figcaption footer {
+    align-self: flex-end; /* Skubber footer til højre */
+    margin: 0;
+    padding: 5px;
+    bottom: 10px;
+    right: 35px;
+}
+.figure-container figcaption footer a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    text-align: center;
+}
+.figure-container figcaption footer a:hover {
+    color: blueviolet;
+
+}
+/* Tablet-visning: 2 kolonner */
+@media (max-width: 1024px) {
+    .section-one {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+        gap: 20px;
+    }
+}
+/* Mobil-visning: 1 kolonne */
+@media (max-width: 768px) {
+    .section-one {
+        grid-template-columns: repeat(1, 1fr); /* 1 kolonne */
+        gap: 10px;
+    }
+}
+/* #endregion */
+/* #region fordeling */
+.fordeling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+/* #endregion */
+/* #region section 2 */
+.section-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+/* Mobilvisning for sektion 2 */
+@media (max-width: 768px) {
+    .section-two {
+        flex-direction: column; /* Stabler elementerne vertikalt */
+        gap: 20px; /* Lidt luft mellem elementerne */
+        padding: 10px;
+    }
+
+    .figure-container {
+        width: 100%; /* Sikrer, at containeren fylder skærmens bredde */
+        max-width: 400px; /* Forhindrer at den bliver for bred */
+        margin: 0 auto; /* Centrerer indholdet */
+    }
+
+    .figure-container figure img {
+        width: 100%; /* Billedet fylder containeren */
+        height: auto; /* Bevarer billedets proportioner */
+    }
+
+    .figure-container figcaption {
+        text-align: center; /* Centrerer teksten */
+        padding: 10px;
+    }
+
+    .figure-container figcaption article {
+        padding: 0 10px; /* Giver lidt plads på siderne */
+    }
+
+    .figure-container figcaption footer {
+        text-align: center; /* Centrerer knappen */
+    }
+}
+
+/* #endregion */
+/* #region footer */
+/* FOOTER STYLING */
+.main-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Mindre padding */
+    background: #000027;
+    color: white;
+    font-size: 0.9rem; /* Mindre tekst for kompakt look */
+}
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.main-footer p {
+    position: relative;
+    top: 1px;
+    right: 7%;
+    font-size: 7.9rem;
+
+}
+/* Newsletter styling */
+.newsletter {
+    flex: 1;
+    text-align: left;
+}
+
+.newsletter h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Knapper */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cancel-btn {
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.confirm-btn {
+    background: transparent;
+    color: green;
+    border: 2px solid green;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Fejlbesked */
+#error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Logo + BND styling */
+.footer-logo {
+    display: flex;
+    position: relative;
+    bottom: 24%;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 90px; /* Større logo */
+    height: auto;
+}
+
+
+.BD {
+    color: #cc0202;
+}
+.BD{
+    font-weight:900;
+}
+
+/* Responsiv tilpasning */
+
+@media (max-width: 768px) {
+    .main-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px; /* Reduceret padding */
+    }
+    .footer-logo{
+        width: 100px;
+        bottom: 14%;
+        right: 7%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-logo p {
+        font-size: 90px; /* Mindre font på mobil */
+        right: 20%;
+    }
+
+    .newsletter form {
+        width: 100%; /* Sikrer, at inputfelterne fylder godt ud */
+    }
+}
+
+/* #endregion */
